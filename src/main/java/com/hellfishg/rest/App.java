@@ -10,5 +10,6 @@ public class App {
 	
     public static void main( String[] args ){
     	SpringApplication.run(App.class, args);//le decimos que esta es la clase que va ejecutar.
+    
     }
 }

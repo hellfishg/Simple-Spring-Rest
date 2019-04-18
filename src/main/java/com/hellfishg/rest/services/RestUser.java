@@ -53,4 +53,21 @@ public class RestUser {
 		
 		return response;
 	}
+	
+	@RequestMapping(
+			method = RequestMethod.DELETE,
+			path = "/deleteUser",
+			consumes = "application/json")
+	public void deleteUser(@RequestBody VOUser user) throws Exception {
+		
+		System.out.println(user.toString());
+	}
+	
+	
+	
+	
+	
+	
+	
+	
 }

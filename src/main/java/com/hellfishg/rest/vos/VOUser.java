@@ -9,6 +9,7 @@ public class VOUser implements Serializable {
 	private String password;
 	private boolean find;
 
+	
 	// Getters and Setters:
 	public String getUser() {
 		return user;

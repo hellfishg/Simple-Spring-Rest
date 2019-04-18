@@ -8,9 +8,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.hellfishg.rest.vos.VOUser;
 
+
 @RestController //notacion para publicar el servicio rest. 
 @RequestMapping(path = "/serviceREST/hell") //ruta desl servicio. contexto.
 public class RestUser {
+
 	
 	@RequestMapping(
 			method = RequestMethod.POST, //servicio recibe metodos post.
@@ -36,5 +38,19 @@ public class RestUser {
 		} catch (Exception e) {
 			return response;
 		}
+	}
+	
+	@RequestMapping(
+			method = RequestMethod.GET,
+			path = "/getUser", 
+			produces = "application/json")
+	public @ResponseBody VOUser getUser() throws Exception {
+		
+		VOUser response = new VOUser();
+		response.setUser("pepino");
+		response.setPassword("perfecto");
+		response.setFind(false);
+		
+		return response;
 	}
 }
